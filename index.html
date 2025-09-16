@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Webpage</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(-45deg,#0f2027, #203a43, #2c5364, #1a2a6c, #000428, #004e92);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            scroll-behavior: smooth;
+        }
+        @keyframes gradient{
+            0%{background-position: 0% 50%;}
+            50%{background-position: 100% 50%;}
+            100%{background-position: 0% 50%;}
+        }
+
+        /* Навигация */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00ffff;
+        }
+
+        section {
+            padding: 70px 50px; /* меньше расстояние */
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Me */
+        .me-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .profile-pic{
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .me-text {
+            max-width: 400px;
+            text-align: left;
+        }
+        .me-text h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        .social-icons {
+            margin-top: 20px;
+        }
+        .social-icons a img {
+            width: 55px;
+            height: 55px;
+            margin: 0 15px 0 0;
+            border-radius: 12px;
+            transition: transform 0.3s;
+            object-fit: contain; /* чтобы не сплющивались */
+        }
+        .social-icons a img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Websites */
+        .web-links a {
+            display: block;
+            margin: 10px 0;
+            font-size: 20px;
+            color: #00ffff;
+            text-decoration: none;
+        }
+        .web-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hobbies */
+        .hobby-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        .hobby-item {
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+        .hobby-item:hover {
+            transform: translateY(-8px);
+        }
+        .hobby-item img {
+            width: 250px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Schedule */
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        th {
+            background: rgba(0,0,0,0.6);
+        }
+
+        /* Contact Form */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #00ffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #00b3b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav>
+        <a href="#me">Me</a>
+        <a href="#websites">Fav Websites</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#schedule">My Schedule</a>
+        <a href="#contact">Contact Me</a>
+    </nav>
+
+    <!-- Me -->
+    <section id="me">
+        <div class="me-section">
+            <img src="images/me 1.0.jpg" alt="My photo" class="profile-pic">
+            <div class="me-text">
+                <h2>Li Danel</h2>
+                <p>2nd year Software Engineering student, passionate about coding, learning new technologies, and exploring creative projects</p>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@danniey" target="_blank"><img src="images/youtube.png" alt="YouTube"></a>
+                    <a href="https://instagram.com/_dannie.ey_" target="_blank"><img src="images/instagram.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Websites -->
+    <section id="websites">
+        <h2>Favorite Websites</h2>
+        <div class="web-links">
+            <a href="https://kino.cm/" target="_blank">KinoGo</a>
+            <a href="https://softboxdorama.com/" target="_blank">Softbox</a>
+        </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+        <h2>My Hobbies</h2>
+        <div class="hobby-gallery">
+            <div class="hobby-item">
+                <img src="images/hobby 1.0.jpg" alt="Hobby 1">
+                <p>Hiking</p>
+            </div>
+            <div class="hobby-item">
+                <img src="images/hobby 2.0.jpg" alt="Hobby 2">
+                <p>Tennis</p>
+            </div>
+            <div class="hobby-item">
+                <img src="images/hobby 3.0.jpg" alt="Hobby 3">
+                <p>Dance</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule">
+        <h2>My Schedule</h2>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Subject</th>
+            </tr>
+            <tr>
+                <td rowspan=2>Monday</td>
+                <td>14:00 - 15:50</td>
+                <td>Design and Analysis of Algorithms</td>
+            </tr>
+            <tr>
+                <td>16:00-17:50</td>
+                <td>WEB</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Tuesday</td>
+                <td>16:00 - 17:50</td>
+                <td>Software Design Patterns</td>
+            </tr>
+            <tr>
+                <td>18:00 - 19:50</td>
+                <td>Design and Analysis of Algorithms</td>
+            </tr>   
+            <tr>
+                <td rowspan="3">Wednesday</td>
+                <td>10:00-11:50</td>
+                <td>Operating systems</td>
+            </tr>
+            <tr>
+                <td>16:00-16:50</td>
+                <td>Software Design Patterns</td>
+            </tr>
+            <tr>
+                <td>18:00-19:50</td>
+                <td>Design and Analysis of Algorithms</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Friday</td>
+                <td>09:00 - 11:00</td>
+                <td>Operating systems</td>
+            </tr>
+            <tr>
+                <td>13:00-13:50</td>
+                <td>WEB</td>
+            </tr>
+            <tr>
+                <td>14:00-15:50</td>
+                <td>Software Design Patterns</td>
+            </tr>
+            <tr>
+                <td>16:00-16:50</td>
+                <td>Design and Analysis of Algorithms</td>
+            </tr>
+
+        </table>
+    </section>
+
+    <!--emoji-->
+    <section id="mood">
+        <h2>My Mood Today</h2>
+        <p>Today I feel very happy 😄, a little bit excited 🚀, and also relaxed 🌸</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="color" name="favoriteColor" value="#00ffff" title="Choose your favorite color">
+        <button type="submit">Submit</button>
+    </form>
+    </section>
+
+
+    
+
+</body>
+</html>
